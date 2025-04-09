@@ -1,0 +1,27 @@
+@use 'container';
+
+.description {
+    &__content {
+        @include container.container();
+
+        p {
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        &__texts {
+            display: flex;
+            padding-bottom: 48px;
+
+            &__text {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            &__info {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}

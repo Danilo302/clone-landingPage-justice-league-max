@@ -1,0 +1,84 @@
+@use 'navbar';
+@use 'container';
+
+.hero {
+    position: relative;
+    background-position: top;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/hero.jpg);
+    top: 58px;
+    &::before {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 19.6%), radial-gradient(97.07% 97.07% at 60.4% -13.07%, rgba(0, 0, 0, 0) 56.64%, #060212 100%);
+        height: 100%;
+        content: "";
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &__container {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        @include container.container();
+
+        &__layout {
+            max-height: 100vh;
+            padding-bottom: 1rem;
+            height: 900px;
+            min-height: 90vh;
+            display: flex;
+            margin-right: -15px;
+            margin-left: -15px;
+
+            &__col {
+                display: flex;
+                position: relative;
+                max-width: 50%;
+                justify-content: start;
+                order: -1;
+                flex-direction: row;
+                padding-bottom: 2rem;
+                padding-left: 15px;
+                align-content: flex-end;
+                flex-wrap: wrap;
+
+                h1 {
+                    padding-bottom: 0px;
+                    position: static;
+                    width: auto;
+
+                    img {
+                        max-width: 370px;
+                        margin-bottom: 1rem;
+                        height: auto;
+                        vertical-align: middle;
+                    }
+                }
+
+                &__category {
+                    display: flex;
+                    li{
+                        @include navbar.btnMenu();
+                        margin-right: 1rem;
+                        margin-top: 1rem;
+                        margin-bottom: 0;
+                        font-size: 14px;
+                    }
+                }
+                p{
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    text-align: left;
+                    font-size: 18px;
+                }
+                a {
+                    @include navbar.btnMenu();
+                    padding: 13px 24px;
+                    margin-top: 4px;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}

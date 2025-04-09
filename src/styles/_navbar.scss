@@ -1,0 +1,62 @@
+@mixin btnMenu() {
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 8px 16px;
+
+    &__menu {
+        display: inherit;
+
+        &__brand {
+            margin-right: 16px;
+            line-height: 1;
+            display: inline-block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            img {
+                width: 110.63px;
+                height: 30px;
+            }
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+
+            &__item {
+                padding-left: 2px;
+
+                a {
+                    padding: 10px 10px;
+                    @include btnMenu();
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+
+        &__button{
+            
+            a{
+                @include btnMenu();
+                padding: 10px 24px;
+            }
+        }
+    }
+}

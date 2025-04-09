@@ -1,0 +1,45 @@
+@use 'container';
+
+.recommends {
+    &__content {
+    
+        margin-top: 5rem;
+        @include container.container();
+        margin-bottom: 3rem;
+
+        &__links {
+            display: flex;
+            flex-wrap: wrap;
+
+            &__item {
+                margin-bottom: 1.5rem;
+                max-width: 25%;
+                padding-right: 15px;
+                padding-left: 15px;
+
+                &:hover {
+                    img {
+                        border-radius: 5px;
+                        border-color: #fff;
+                    }
+                    h6 {
+                        color: #007bff;
+                        text-decoration: underline;
+                    }
+                }
+
+                img {
+                    border: 2px solid transparent;
+                    max-width: 100%;
+                }
+
+                h6 {
+                    border: 2px solid transparent;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use 'container';
+
+.footer {
+    text-align: center;
+
+    &__container {
+        @include container.container();
+        max-width: 960px;
+        margin-top: 24px;
+
+        &__links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
