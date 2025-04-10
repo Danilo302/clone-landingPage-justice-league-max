@@ -39,8 +39,17 @@ body {
     color: #000 !important;
     border-radius: 8px;
     padding: 10px 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: darken(#fff, 20%);
+    }
 }
 
 a {
     color: #fff;
+    &:hover{
+        background-color: lighten(#000000,20%);
+    }
 }
